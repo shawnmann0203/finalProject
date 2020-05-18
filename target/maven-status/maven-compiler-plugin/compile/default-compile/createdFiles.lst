@@ -1,0 +1,14 @@
+com\RLRLitems\RLRLApi\App.class
+com\RLRLitems\RLRLApi\entity\Team.class
+com\RLRLitems\RLRLApi\entity\Address.class
+com\RLRLitems\RLRLApi\repository\UserRepository.class
+com\RLRLitems\RLRLApi\entity\User.class
+com\RLRLitems\RLRLApi\repository\TeamRepository.class
+com\RLRLitems\RLRLApi\entity\Order.class
+com\RLRLitems\RLRLApi\util\OrderStatus.class
+com\RLRLitems\RLRLApi\entity\Credentials.class
+com\RLRLitems\RLRLApi\repository\OrderRepository.class
+com\RLRLitems\RLRLApi\util\MemberRank.class
+com\RLRLitems\RLRLApi\entity\Product.class
+com\RLRLitems\RLRLApi\repository\AddressRepository.class
+com\RLRLitems\RLRLApi\repository\ProductRepository.class
