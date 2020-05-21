@@ -24,7 +24,7 @@ public class User {
 	private String lastName;
 	private String email;
 	private Address address;
-	private boolean isAdmin;
+	private String role;
 	private MemberRank rank;
 	private Set<Order> orders;
 	
@@ -98,14 +98,6 @@ public class User {
 		this.orders = orders;
 	}
 
-	public boolean isAdmin() {
-		return isAdmin;
-	}
-
-	public void setAdmin(boolean isAdmin) {
-		this.isAdmin = isAdmin;
-	}
-
 	@Column(unique = true)
 	public String getEmail() {
 		return email;
@@ -113,6 +105,14 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
 

@@ -3,6 +3,7 @@ package com.RLRLitems.RLRLApi.entity;
 public class Credentials {
 	private String username;
 	private String password;
+	private String email;
 	
 	
 	public String getUsername() {
@@ -19,6 +20,14 @@ public class Credentials {
 	
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }

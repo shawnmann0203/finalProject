@@ -10,11 +10,13 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import com.RLRLitems.RLRLApi.util.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
+@Table(name="`Order`")
 public class Order {
 	private Long id;
 	private LocalDate ordered;
@@ -23,6 +25,7 @@ public class Order {
 	private double invoiceAmount;
 	private OrderStatus status;
 	private Set<Product> products;
+	private boolean isGuestOrder;
 	
 	@JsonIgnore
 	private User user;
@@ -95,4 +98,14 @@ public class Order {
 	public void setUser(User user) {
 		this.user = user;
 	}
+
+	public boolean isGuestOrder() {
+		return isGuestOrder;
+	}
+
+	public void setGuestOrder(boolean isGuestOrder) {
+		this.isGuestOrder = isGuestOrder;
+	}
+
+
 }
