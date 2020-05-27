@@ -46,6 +46,10 @@ public class TeamService {
 		}
 	}
 	
+	public Team getTeam(Long id) {
+		return repo.findOne(id);
+	}
+	
 	
 
 }

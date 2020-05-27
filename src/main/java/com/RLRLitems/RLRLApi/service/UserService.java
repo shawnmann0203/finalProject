@@ -16,6 +16,10 @@ public class UserService {
 	@Autowired
 	private UserRepository repo;
 	
+	public User getUser(Long id) {
+		return repo.findOne(id);
+	}
+	
 	public User updateUserInfo(User user, Long id) throws Exception{
 		try {
 			User updateUser = repo.findOne(id);
