@@ -25,6 +25,7 @@ public class TeamController {
 	@Autowired
 	private AuthService authService;
 	
+		
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<Object> getTeams(){
 		return new ResponseEntity<Object>(service.getTeams(), HttpStatus.OK);
@@ -59,6 +60,7 @@ public class TeamController {
 			}
 		
 	}
+	
 	
 	
 

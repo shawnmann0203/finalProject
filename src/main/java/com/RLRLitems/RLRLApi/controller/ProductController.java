@@ -53,7 +53,27 @@ public class ProductController {
 			}
 	}
 	
-	@RequestMapping(value = "/{id}")
+	@RequestMapping(value = "/{id}", method = RequestMethod.POST)
+	public ResponseEntity<Object> updateProduct(@RequestBody Product product, @PathVariable Long id, HttpServletRequest request) throws Exception{
+		try {
+			if(authService.isAdmin(authService.getToken(request))) {
+				service.updateProduct(product, id);
+				return new ResponseEntity<Object>("Successfully update Product with id: " + id, HttpStatus.OK);
+			}else {
+				return new ResponseEntity<Object>("Unauthorized request.", HttpStatus.UNAUTHORIZED);
+			}
+			}catch(Exception e) {
+				return new ResponseEntity<Object>(e.getMessage(), HttpStatus.NOT_FOUND);
+			}
+	}
+	
+	@RequestMapping(value = "/team/{teamId}", method = RequestMethod.GET)
+	public ResponseEntity<Object> getProductByTeamId(@PathVariable Long teamId){
+		return new ResponseEntity<Object>(service.getProductsByTeamId(teamId), HttpStatus.OK);
+		
+	}
+	
+	
 
 
 }
