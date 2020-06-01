@@ -25,18 +25,20 @@ public class TeamController {
 	@Autowired
 	private AuthService authService;
 	
-		
+	//localhost:8080/teams
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<Object> getTeams(){
 		return new ResponseEntity<Object>(service.getTeams(), HttpStatus.OK);
 	}
 	
+	//localhost:8080/teams/{id}
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Object> getTeam(@PathVariable Long id){
 		return new ResponseEntity<Object>(service.getTeam(id), HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = "/{id}", method = RequestMethod.POST)
+	//localhost:8080/teams/{id}
+	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Object> createTeam(@RequestBody Team team, HttpServletRequest request) throws Exception{
 			if(authService.isAdmin(authService.getToken(request))) {
 				return new ResponseEntity<Object>(service.createTeam(team), HttpStatus.CREATED);
@@ -46,6 +48,7 @@ public class TeamController {
 		
 	}
 	
+	//localhost:8080/teams/{id}
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<Object> deleteTeam(@PathVariable Long id, HttpServletRequest request) throws Exception{
 		try {

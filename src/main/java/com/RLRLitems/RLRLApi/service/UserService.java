@@ -3,6 +3,7 @@ package com.RLRLitems.RLRLApi.service;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
 import com.RLRLitems.RLRLApi.entity.User;
@@ -26,6 +27,8 @@ public class UserService {
 			updateUser.setAddress(user.getAddress());
 			updateUser.setFirstName(user.getFirstName());
 			updateUser.setLastName(user.getLastName());
+			updateUser.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
+			updateUser.setAddress(user.getAddress());
 			return repo.save(updateUser);
 		}catch(Exception e) {
 			logger.error("Exception occured while trying to update user: " + id, e);

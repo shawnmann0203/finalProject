@@ -13,12 +13,14 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import com.RLRLitems.RLRLApi.util.MemberRank;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 public class User {
 	
 	private Long id;
-	private String hash;
+	private String password;
 	private String username;
 	private String firstName;
 	private String lastName;
@@ -38,12 +40,14 @@ public class User {
 		this.id = id;
 	}
 	
-	public String getHash() {
-		return hash;
+	@JsonIgnore
+	public String getPassword() {
+		return password;
 	}
 	
-	public void setHash(String hash) {
-		this.hash = hash;
+	@JsonProperty
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	@Column(unique=true)

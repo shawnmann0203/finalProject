@@ -36,31 +36,29 @@ public class AuthService {
 	public User register(Credentials cred, String role) throws AuthenticationException {
 		User user = new User();
 		user.setUsername(cred.getUsername());
-		user.setHash(BCrypt.hashpw(cred.getPassword(), BCrypt.gensalt()));
+		user.setPassword(BCrypt.hashpw(cred.getPassword(), BCrypt.gensalt()));
 		user.setEmail(cred.getEmail());
 		user.setRole(role);
 		user.setRank(MemberRank.BRONZE);
-		if(!isValidEmailAddress(cred.getEmail())){
-			throw new AuthenticationException("Email is not valid");
-		} else {
 			try {
-				userRepository.save(user);
-				return user;
+				return userRepository.save(user);
 			} catch (DataIntegrityViolationException e){
-				throw new AuthenticationException("Username or Email already in use.");
+				throw new AuthenticationException("Username already in use.");
 			}
 		}
-	}
+	
 	
 	
 	public LoggedInView login(Credentials cred) throws AuthenticationException {
 		User foundUser = userRepository.findByUsername(cred.getUsername());
-		if(foundUser != null && BCrypt.checkpw(cred.getPassword(), foundUser.getHash())) {
+		if(BCrypt.checkpw(cred.getPassword(), foundUser.getPassword())) {
 			LoggedInView view = new LoggedInView();
 			view.setUser(foundUser);
 			view.setJwt(generateToken(foundUser));
-		}
+			return view;
+		}else {
 		throw new AuthenticationException("Incorrect username or password.");
+		}
 	}
 	
 	private String generateToken(User user) {

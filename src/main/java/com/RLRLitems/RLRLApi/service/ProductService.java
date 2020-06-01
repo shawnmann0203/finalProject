@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.RLRLitems.RLRLApi.entity.Product;
+import com.RLRLitems.RLRLApi.entity.Team;
 import com.RLRLitems.RLRLApi.repository.ProductRepository;
+import com.RLRLitems.RLRLApi.repository.TeamRepository;
 
 @Service
 public class ProductService {
@@ -14,6 +16,9 @@ public class ProductService {
 	
 	@Autowired
 	private ProductRepository repo;
+	
+	@Autowired
+	private TeamRepository teamRepo;
 	
 	public Iterable<Product> getProducts(){
 		return repo.findAll();
@@ -24,7 +29,11 @@ public class ProductService {
 		
 	}
 	
-	public Product createProduct(Product product) {
+	public Product createProduct(Product product, Long teamId) {
+		product.setTeam(teamRepo.findOne(teamId));
+		Team updateTeam = teamRepo.findOne(teamId);
+		updateTeam.getProducts().add(product);
+		teamRepo.save(updateTeam);
 		return repo.save(product);
 	}
 	

@@ -30,15 +30,17 @@ public class ProductController {
 		return new ResponseEntity<Object>(service.getProducts(), HttpStatus.OK);
 	}
 	
+	//localhost:8080/products
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Object> createProduct(@RequestBody Product product, HttpServletRequest request) throws Exception{
+	public ResponseEntity<Object> createProduct(@RequestBody Product product, @RequestBody Long teamId, HttpServletRequest request) throws Exception{
 		if(authService.isAdmin(authService.getToken(request))) {
-			return new ResponseEntity<Object>(service.createProduct(product), HttpStatus.CREATED);
+			return new ResponseEntity<Object>(service.createProduct(product, teamId), HttpStatus.CREATED);
 		} else {
 			return new ResponseEntity<Object>("Unauthorized request.", HttpStatus.UNAUTHORIZED);
 		}
 	}
 	
+	//localhost:8080/products/{id}
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<Object> removeProduct(@PathVariable Long id, HttpServletRequest request) throws Exception{
 		try {
@@ -53,6 +55,7 @@ public class ProductController {
 			}
 	}
 	
+	//localhost:8080/products/{id}
 	@RequestMapping(value = "/{id}", method = RequestMethod.POST)
 	public ResponseEntity<Object> updateProduct(@RequestBody Product product, @PathVariable Long id, HttpServletRequest request) throws Exception{
 		try {
@@ -67,6 +70,7 @@ public class ProductController {
 			}
 	}
 	
+	//localhost:8080/products/team/{teamId}
 	@RequestMapping(value = "/team/{teamId}", method = RequestMethod.GET)
 	public ResponseEntity<Object> getProductByTeamId(@PathVariable Long teamId){
 		return new ResponseEntity<Object>(service.getProductsByTeamId(teamId), HttpStatus.OK);

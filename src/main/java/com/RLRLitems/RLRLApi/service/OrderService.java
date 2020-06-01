@@ -37,13 +37,28 @@ public class OrderService {
 	@Autowired
 	private ProductRepository productRepo;
 	
+	public Iterable<Order> getOrders(){
+		return repo.findAll();
+	}
+	
 	public Order submitNewOrder(Set<Long> productIds, Long userId) throws Exception {
 		try {
 			User user = userRepo.findOne(userId);
-			Order order = inalializeNewOrder(productIds, user);
+			Order order = initializeNewOrder(productIds, user);
 			return repo.save(order);
 		} catch (Exception e) {
-			logger.error("Exception occured while trying to create new order for customer: " + userId, e);
+			logger.error("Exception occured while trying to create new order for user: " + userId, e);
+			throw e;
+		}
+	}
+	
+	public Order submitNewGuestOrder(Set<Long> productIds, User guest) throws Exception{
+		try {
+			Order order = initializeNewOrder(productIds, guest);
+			userRepo.save(guest);
+			return repo.save(order);
+		}catch(Exception e) {
+			logger.error("Exception occured while trying to create new order for guest user: " + guest, e);
 			throw e;
 		}
 	}
@@ -54,7 +69,7 @@ public class OrderService {
 			cancelOrder.setStatus(OrderStatus.CANCELLED);
 			return repo.save(cancelOrder);
 		}catch(Exception e) {
-			logger.error("Exception occured while trying to cancel order for customer: " + orderId, e);
+			logger.error("Exception occured while trying to cancel order for user: " + orderId, e);
 			throw new Exception("Unable to cancel order.");
 		}
 	}
@@ -70,7 +85,7 @@ public class OrderService {
 		}
 	}
 	
-	private Order inalializeNewOrder(Set<Long> productIds, User user) {
+	private Order initializeNewOrder(Set<Long> productIds, User user) {
 		Order order = new Order();
 		order.setProducts(converToProductSet(productRepo.findAll(productIds)));
 		order.setOrdered(LocalDate.now());
@@ -108,4 +123,6 @@ public class OrderService {
 		}
 		return set;
 	}
+	
+	
 }
