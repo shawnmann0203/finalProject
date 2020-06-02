@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.RLRLitems.RLRLApi.service.TeamService;
+import com.RLRLitems.RLRLApi.entity.Product;
 import com.RLRLitems.RLRLApi.entity.Team;
 import com.RLRLitems.RLRLApi.service.AuthService;
+import com.RLRLitems.RLRLApi.service.ProductService;
 
 @RestController
 @RequestMapping("/teams")
@@ -24,6 +26,9 @@ public class TeamController {
 	
 	@Autowired
 	private AuthService authService;
+	
+	@Autowired
+	private ProductService productService;
 	
 	//localhost:8080/teams
 	@RequestMapping(method = RequestMethod.GET)
@@ -64,6 +69,25 @@ public class TeamController {
 		
 	}
 	
+	//localhost:8080/teams/{teamId}/products
+	@RequestMapping(value = "/{teamId}/products", method = RequestMethod.POST)
+	public ResponseEntity<Object> createTeamProduct(@RequestBody Product product, @PathVariable Long teamId, HttpServletRequest request) throws Exception{
+		try {
+			if(authService.isAdmin(authService.getToken(request))) {
+				return new ResponseEntity<Object>(productService.createProduct(product, teamId), HttpStatus.CREATED);
+			}else {
+				return new ResponseEntity<Object>("Unauthorized request.", HttpStatus.UNAUTHORIZED);
+			}
+		}catch(Exception e) {
+			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.NOT_FOUND);
+		}
+	}
+	//localhost:8080/products/team/{teamId}
+	@RequestMapping(value = "/{teamId}/products", method = RequestMethod.GET)
+	public ResponseEntity<Object> getProductByTeamId(@PathVariable Long teamId){
+		return new ResponseEntity<Object>(productService.getProductsByTeamId(teamId), HttpStatus.OK);
+			
+	}
 	
 	
 

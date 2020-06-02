@@ -70,12 +70,7 @@ public class ProductController {
 			}
 	}
 	
-	//localhost:8080/products/team/{teamId}
-	@RequestMapping(value = "/team/{teamId}", method = RequestMethod.GET)
-	public ResponseEntity<Object> getProductByTeamId(@PathVariable Long teamId){
-		return new ResponseEntity<Object>(service.getProductsByTeamId(teamId), HttpStatus.OK);
-		
-	}
+
 	
 	
 

@@ -40,10 +40,15 @@ public class AuthService {
 		user.setEmail(cred.getEmail());
 		user.setRole(role);
 		user.setRank(MemberRank.BRONZE);
-			try {
-				return userRepository.save(user);
-			} catch (DataIntegrityViolationException e){
-				throw new AuthenticationException("Username already in use.");
+			if(!isValidEmailAddress(cred.getEmail())){
+				throw new AuthenticationException("Email is not valid");
+			} else {
+				try {
+					userRepository.save(user);
+					return user;
+				} catch (DataIntegrityViolationException e){
+					throw new AuthenticationException("Username or Email already in use.");
+				}
 			}
 		}
 	

@@ -43,7 +43,6 @@ public class ProductService {
 			updateProduct.setName(product.getName());
 			updateProduct.setDescription(product.getDescription());
 			updateProduct.setPrice(product.getPrice());
-			updateProduct.setTeam(product.getTeam());
 			return repo.save(updateProduct);
 		} catch(Exception e) {
 			logger.error("Exception occured while trying to update product: " + id, e);
