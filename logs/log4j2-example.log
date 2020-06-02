@@ -3424,3 +3424,529 @@
 >
 			2020-06-01 06:08:12.653 %Sp LAPTOP-P7RN3F8A
 			--- [       Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@187980c7: startup date [Mon Jun 01 20:07:24 MST 2020]; root of context hierarchy
+>
+			2020-06-02 06:00:32.577 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] c.R.R.App                                : Starting App on LAPTOP-P7RN3F8A with PID 2724 (C:\Users\tidly\eclipse-workspace\RLRLApi\target\classes started by tidly in C:\Users\tidly\eclipse-workspace\RLRLApi)
+>
+			2020-06-02 06:00:32.605 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a869f53: startup date [Tue Jun 02 00:00:32 MST 2020]; root of context hierarchy
+>
+			2020-06-02 06:00:33.162 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+>
+			2020-06-02 06:00:33.606 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+>
+			2020-06-02 06:00:33.734 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1710ab9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+>
+			2020-06-02 06:00:33.761 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+>
+			2020-06-02 06:00:33.770 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+>
+			2020-06-02 06:00:33.778 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+>
+			2020-06-02 06:00:34.320 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+>
+			2020-06-02 06:00:34.412 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.a.c.c.StandardService                  : Starting service Tomcat
+>
+			2020-06-02 06:00:34.415 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.0.26
+>
+			2020-06-02 06:00:34.489 %Sp LAPTOP-P7RN3F8A
+			--- [ost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+>
+			2020-06-02 06:00:34.492 %Sp LAPTOP-P7RN3F8A
+			--- [ost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1889 ms
+>
+			2020-06-02 06:00:35.087 %Sp LAPTOP-P7RN3F8A
+			--- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+>
+			2020-06-02 06:00:35.093 %Sp LAPTOP-P7RN3F8A
+			--- [ost-startStop-1] o.s.b.c.e.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+>
+			2020-06-02 06:00:35.094 %Sp LAPTOP-P7RN3F8A
+			--- [ost-startStop-1] o.s.b.c.e.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+>
+			2020-06-02 06:00:35.328 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+>
+			2020-06-02 06:00:35.338 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+>
+			2020-06-02 06:00:35.405 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.Version                              : HHH000412: Hibernate Core {4.3.11.Final}
+>
+			2020-06-02 06:00:35.410 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+>
+			2020-06-02 06:00:35.412 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.c.Environment                        : HHH000021: Bytecode provider name : javassist
+>
+			2020-06-02 06:00:35.561 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+>
+			2020-06-02 06:00:35.843 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+>
+			2020-06-02 06:00:36.096 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.h.i.a.ASTQueryTranslatorFactory      : HHH000397: Using ASTQueryTranslatorFactory
+>
+			2020-06-02 06:00:36.497 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000228: Running hbm2ddl schema update
+>
+			2020-06-02 06:00:36.499 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000102: Fetching database metadata
+>
+			2020-06-02 06:00:36.501 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000396: Updating schema
+>
+			2020-06-02 06:00:36.524 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: rlrl_api.order
+>
+			2020-06-02 06:00:36.526 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [ordered, user_id, delivered, id, estimated_delivery, guest_order, invoice_amount, status]
+>
+			2020-06-02 06:00:36.527 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: [fk_mh40cn97o5svvy5c32ws9tnvp]
+>
+			2020-06-02 06:00:36.528 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [fk_mh40cn97o5svvy5c32ws9tnvp, primary]
+>
+			2020-06-02 06:00:36.534 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: rlrl_api.address
+>
+			2020-06-02 06:00:36.536 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [zip, city, street, id, state]
+>
+			2020-06-02 06:00:36.537 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: []
+>
+			2020-06-02 06:00:36.538 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [primary]
+>
+			2020-06-02 06:00:36.545 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: rlrl_api.product
+>
+			2020-06-02 06:00:36.547 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [price, name, description, id, team_id]
+>
+			2020-06-02 06:00:36.548 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: [fk_1r18de9qj6xvbrd77mfij7wo9]
+>
+			2020-06-02 06:00:36.549 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [primary, fk_1r18de9qj6xvbrd77mfij7wo9]
+>
+			2020-06-02 06:00:36.554 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: rlrl_api.product_order
+>
+			2020-06-02 06:00:36.556 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [product_id, order_id]
+>
+			2020-06-02 06:00:36.557 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: [fk_5uw5nxqovigv7mf1gmbos1rl8, fk_sf5yp37b7qt63qqoq25f82lpu]
+>
+			2020-06-02 06:00:36.559 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [fk_5uw5nxqovigv7mf1gmbos1rl8, primary]
+>
+			2020-06-02 06:00:36.565 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: rlrl_api.team
+>
+			2020-06-02 06:00:36.567 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [name, id]
+>
+			2020-06-02 06:00:36.568 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: []
+>
+			2020-06-02 06:00:36.569 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [primary]
+>
+			2020-06-02 06:00:36.575 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: rlrl_api.user
+>
+			2020-06-02 06:00:36.577 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [password, role, last_name, rank, id, first_name, email, hash, username]
+>
+			2020-06-02 06:00:36.578 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: []
+>
+			2020-06-02 06:00:36.579 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [uk_ob8kqyqqgmefl0aco34akdtpe, uk_sb8bbouer5wak8vyiiy4pf2bx, primary]
+>
+			2020-06-02 06:00:36.582 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000232: Schema update complete
+>
+			2020-06-02 06:00:37.701 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a869f53: startup date [Tue Jun 02 00:00:32 MST 2020]; root of context hierarchy
+>
+			2020-06-02 06:00:37.766 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.OrderController.getOrders(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:00:37.768 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders/user/{id}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.OrderController.createUserOrder(java.util.Set<java.lang.Long>,java.lang.Long,javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:00:37.771 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders/guest/checkout],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.OrderController.createGuestOrder(java.util.Set<java.lang.Long>,com.RLRLitems.RLRLApi.entity.User)
+>
+			2020-06-02 06:00:37.771 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.OrderController.updateOrder(com.RLRLitems.RLRLApi.entity.Order,java.lang.Long,javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:00:37.773 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products/{id}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.ProductController.updateProduct(com.RLRLitems.RLRLApi.entity.Product,java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:00:37.775 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.ProductController.removeProduct(java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:00:37.778 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.ProductController.getProducts()
+>
+			2020-06-02 06:00:37.779 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.ProductController.createProduct(com.RLRLitems.RLRLApi.entity.Product,java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:00:37.782 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teams/{teamId}/products],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.TeamController.getProductByTeamId(java.lang.Long)
+>
+			2020-06-02 06:00:37.784 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teams/{teamId}/products],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.TeamController.createTeamProduct(com.RLRLitems.RLRLApi.entity.Product,java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:00:37.786 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teams],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.TeamController.createTeam(com.RLRLitems.RLRLApi.entity.Team,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:00:37.789 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teams],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.TeamController.getTeams()
+>
+			2020-06-02 06:00:37.791 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teams/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.TeamController.getTeam(java.lang.Long)
+>
+			2020-06-02 06:00:37.793 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teams/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.TeamController.deleteTeam(java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:00:37.795 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/register],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.UserController.register(com.RLRLitems.RLRLApi.entity.Credentials)
+>
+			2020-06-02 06:00:37.798 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.UserController.getUserInfo(java.lang.Long,javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:00:37.800 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/adminregister],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.UserController.adminRegister(com.RLRLitems.RLRLApi.entity.Credentials,javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:00:37.801 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.UserController.login(com.RLRLitems.RLRLApi.entity.Credentials)
+>
+			2020-06-02 06:00:37.803 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.UserController.deleteUser(java.lang.Long,javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:00:37.805 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:00:37.809 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:00:37.828 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>
+			2020-06-02 06:00:37.830 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>
+			2020-06-02 06:00:37.862 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>
+			2020-06-02 06:00:38.014 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+>
+			2020-06-02 06:00:38.039 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+>
+			2020-06-02 06:00:38.049 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+>
+			2020-06-02 06:00:38.059 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.a.t.u.n.NioSelectorPool                : Using a shared selector for servlet write/read
+>
+			2020-06-02 06:00:38.073 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+>
+			2020-06-02 06:00:38.075 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] c.R.R.App                                : Started App in 5.714 seconds (JVM running for 10.16)
+>
+			2020-06-02 06:01:25.366 %Sp LAPTOP-P7RN3F8A
+			--- [nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+>
+			2020-06-02 06:01:25.368 %Sp LAPTOP-P7RN3F8A
+			--- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+>
+			2020-06-02 06:01:25.395 %Sp LAPTOP-P7RN3F8A
+			--- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+>
+			2020-06-02 06:03:18.359 %Sp LAPTOP-P7RN3F8A
+			--- [       Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a869f53: startup date [Tue Jun 02 00:00:32 MST 2020]; root of context hierarchy
+>
+			2020-06-02 06:03:25.948 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] c.R.R.App                                : Starting App on LAPTOP-P7RN3F8A with PID 4892 (C:\Users\tidly\eclipse-workspace\RLRLApi\target\classes started by tidly in C:\Users\tidly\eclipse-workspace\RLRLApi)
+>
+			2020-06-02 06:03:25.974 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@32363002: startup date [Tue Jun 02 00:03:25 MST 2020]; root of context hierarchy
+>
+			2020-06-02 06:03:26.487 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+>
+			2020-06-02 06:03:26.873 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+>
+			2020-06-02 06:03:27.073 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$731b8590] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+>
+			2020-06-02 06:03:27.100 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+>
+			2020-06-02 06:03:27.114 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+>
+			2020-06-02 06:03:27.121 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+>
+			2020-06-02 06:03:27.569 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+>
+			2020-06-02 06:03:27.718 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.a.c.c.StandardService                  : Starting service Tomcat
+>
+			2020-06-02 06:03:27.721 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.0.26
+>
+			2020-06-02 06:03:27.803 %Sp LAPTOP-P7RN3F8A
+			--- [ost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+>
+			2020-06-02 06:03:27.805 %Sp LAPTOP-P7RN3F8A
+			--- [ost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1833 ms
+>
+			2020-06-02 06:03:28.328 %Sp LAPTOP-P7RN3F8A
+			--- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+>
+			2020-06-02 06:03:28.333 %Sp LAPTOP-P7RN3F8A
+			--- [ost-startStop-1] o.s.b.c.e.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+>
+			2020-06-02 06:03:28.335 %Sp LAPTOP-P7RN3F8A
+			--- [ost-startStop-1] o.s.b.c.e.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+>
+			2020-06-02 06:03:28.508 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+>
+			2020-06-02 06:03:28.521 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+>
+			2020-06-02 06:03:28.585 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.Version                              : HHH000412: Hibernate Core {4.3.11.Final}
+>
+			2020-06-02 06:03:28.589 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+>
+			2020-06-02 06:03:28.592 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.c.Environment                        : HHH000021: Bytecode provider name : javassist
+>
+			2020-06-02 06:03:28.720 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+>
+			2020-06-02 06:03:28.997 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+>
+			2020-06-02 06:03:29.174 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.h.i.a.ASTQueryTranslatorFactory      : HHH000397: Using ASTQueryTranslatorFactory
+>
+			2020-06-02 06:03:29.479 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000228: Running hbm2ddl schema update
+>
+			2020-06-02 06:03:29.481 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000102: Fetching database metadata
+>
+			2020-06-02 06:03:29.483 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000396: Updating schema
+>
+			2020-06-02 06:03:29.499 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: rlrl_api.order
+>
+			2020-06-02 06:03:29.500 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [ordered, user_id, delivered, id, estimated_delivery, guest_order, invoice_amount, status]
+>
+			2020-06-02 06:03:29.501 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: [fk_mh40cn97o5svvy5c32ws9tnvp]
+>
+			2020-06-02 06:03:29.502 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [fk_mh40cn97o5svvy5c32ws9tnvp, primary]
+>
+			2020-06-02 06:03:29.507 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: rlrl_api.address
+>
+			2020-06-02 06:03:29.511 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [zip, city, street, id, state]
+>
+			2020-06-02 06:03:29.513 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: []
+>
+			2020-06-02 06:03:29.514 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [primary]
+>
+			2020-06-02 06:03:29.520 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: rlrl_api.product
+>
+			2020-06-02 06:03:29.521 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [price, name, description, id, team_id]
+>
+			2020-06-02 06:03:29.522 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: [fk_1r18de9qj6xvbrd77mfij7wo9]
+>
+			2020-06-02 06:03:29.524 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [primary, fk_1r18de9qj6xvbrd77mfij7wo9]
+>
+			2020-06-02 06:03:29.531 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: rlrl_api.product_order
+>
+			2020-06-02 06:03:29.532 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [product_id, order_id]
+>
+			2020-06-02 06:03:29.533 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: [fk_5uw5nxqovigv7mf1gmbos1rl8, fk_sf5yp37b7qt63qqoq25f82lpu]
+>
+			2020-06-02 06:03:29.534 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [fk_5uw5nxqovigv7mf1gmbos1rl8, primary]
+>
+			2020-06-02 06:03:29.539 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: rlrl_api.team
+>
+			2020-06-02 06:03:29.541 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [name, id]
+>
+			2020-06-02 06:03:29.541 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: []
+>
+			2020-06-02 06:03:29.543 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [primary]
+>
+			2020-06-02 06:03:29.548 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: rlrl_api.user
+>
+			2020-06-02 06:03:29.550 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [password, role, last_name, rank, id, first_name, email, hash, username]
+>
+			2020-06-02 06:03:29.551 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: []
+>
+			2020-06-02 06:03:29.552 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [uk_ob8kqyqqgmefl0aco34akdtpe, uk_sb8bbouer5wak8vyiiy4pf2bx, primary]
+>
+			2020-06-02 06:03:29.554 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000232: Schema update complete
+>
+			2020-06-02 06:03:30.268 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@32363002: startup date [Tue Jun 02 00:03:25 MST 2020]; root of context hierarchy
+>
+			2020-06-02 06:03:30.347 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.OrderController.getOrders(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:03:30.350 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.OrderController.updateOrder(com.RLRLitems.RLRLApi.entity.Order,java.lang.Long,javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:03:30.352 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders/user/{id}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.OrderController.createUserOrder(java.util.Set<java.lang.Long>,java.lang.Long,javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:03:30.353 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders/guest/checkout],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.OrderController.createGuestOrder(java.util.Set<java.lang.Long>,com.RLRLitems.RLRLApi.entity.User)
+>
+			2020-06-02 06:03:30.354 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.ProductController.removeProduct(java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:03:30.359 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.ProductController.getProducts()
+>
+			2020-06-02 06:03:30.360 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.ProductController.createProduct(com.RLRLitems.RLRLApi.entity.Product,java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:03:30.362 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products/{id}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.ProductController.updateProduct(com.RLRLitems.RLRLApi.entity.Product,java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:03:30.364 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teams/{teamId}/products],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.TeamController.getProductByTeamId(java.lang.Long)
+>
+			2020-06-02 06:03:30.366 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teams/{teamId}/products],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.TeamController.createTeamProduct(com.RLRLitems.RLRLApi.entity.Product,java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:03:30.369 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teams],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.TeamController.createTeam(com.RLRLitems.RLRLApi.entity.Team,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:03:30.371 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teams/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.TeamController.deleteTeam(java.lang.Long,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+>
+			2020-06-02 06:03:30.372 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teams],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.TeamController.getTeams()
+>
+			2020-06-02 06:03:30.373 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teams/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.TeamController.getTeam(java.lang.Long)
+>
+			2020-06-02 06:03:30.375 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/register],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.UserController.register(com.RLRLitems.RLRLApi.entity.Credentials)
+>
+			2020-06-02 06:03:30.377 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.UserController.getUserInfo(java.lang.Long,javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:03:30.380 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.UserController.deleteUser(java.lang.Long,javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:03:30.382 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/adminregister],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.UserController.adminRegister(com.RLRLitems.RLRLApi.entity.Credentials,javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:03:30.383 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.RLRLitems.RLRLApi.controller.UserController.login(com.RLRLitems.RLRLApi.entity.Credentials)
+>
+			2020-06-02 06:03:30.385 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:03:30.386 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+>
+			2020-06-02 06:03:30.413 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>
+			2020-06-02 06:03:30.415 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>
+			2020-06-02 06:03:30.443 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>
+			2020-06-02 06:03:30.582 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+>
+			2020-06-02 06:03:30.604 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+>
+			2020-06-02 06:03:30.612 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+>
+			2020-06-02 06:03:30.622 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] o.a.t.u.n.NioSelectorPool                : Using a shared selector for servlet write/read
+>
+			2020-06-02 06:03:30.636 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+>
+			2020-06-02 06:03:30.638 %Sp LAPTOP-P7RN3F8A
+			--- [LApi.App.main()] c.R.R.App                                : Started App in 4.878 seconds (JVM running for 8.126)
+>
+			2020-06-02 06:03:37.454 %Sp LAPTOP-P7RN3F8A
+			--- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+>
+			2020-06-02 06:03:37.456 %Sp LAPTOP-P7RN3F8A
+			--- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+>
+			2020-06-02 06:03:37.480 %Sp LAPTOP-P7RN3F8A
+			--- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+>
+			2020-06-02 06:06:12.726 %Sp LAPTOP-P7RN3F8A
+			--- [       Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@32363002: startup date [Tue Jun 02 00:03:25 MST 2020]; root of context hierarchy

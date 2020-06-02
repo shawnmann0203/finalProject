@@ -29,6 +29,9 @@ public class AuthService {
 	@Autowired
 	private UserRepository userRepository;
 	
+	@Autowired
+	private EmailService emailService;
+	
 
 	
 	private static Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
@@ -44,6 +47,7 @@ public class AuthService {
 				throw new AuthenticationException("Email is not valid");
 			} else {
 				try {
+					emailService.sendWelcomeEmail(cred);
 					userRepository.save(user);
 					return user;
 				} catch (DataIntegrityViolationException e){

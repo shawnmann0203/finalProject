@@ -24,7 +24,7 @@ public class UserController {
 	
 	@Autowired
 	private AuthService authService;
-	
+		
 	
 	//localhost:8080/user/register
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
