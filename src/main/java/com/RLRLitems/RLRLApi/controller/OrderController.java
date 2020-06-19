@@ -44,6 +44,18 @@ public class OrderController {
 		}
 	}
 	
+	
+	//localhost:8080/orders/guest
+	@RequestMapping(value="/guest", method = RequestMethod.POST)
+	public ResponseEntity<Object> createGuestOrder(@RequestBody Set<Long> productIds, @RequestBody User guest){
+		try {
+			return new ResponseEntity<Object>(service.submitNewGuestOrder(productIds, guest), HttpStatus.CREATED);
+		} catch(Exception e) {
+			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
+		}
+	}
+
+	
 	//localhost:8080/orders/{id}
 	@RequestMapping(value="/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<Object> updateOrder(@RequestBody Order order, @PathVariable Long id, HttpServletRequest request){
@@ -64,15 +76,7 @@ public class OrderController {
 		}
 	}
 	
-	//localhost:8080/orders/guest/checkout
-	@RequestMapping(value="/guest/checkout", method = RequestMethod.POST)
-	public ResponseEntity<Object> createGuestOrder(@RequestBody Set<Long> productIds, @RequestBody User guest){
-		try {
-			return new ResponseEntity<Object>(service.submitNewGuestOrder(productIds, guest), HttpStatus.CREATED);
-		} catch(Exception e) {
-			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
-		}
-	}
+
 	
 	//localhost:8080/orders
 	@RequestMapping(method = RequestMethod.GET)
@@ -80,6 +84,20 @@ public class OrderController {
 		try {
 			if(authService.isAdmin(authService.getToken(request))) {
 				return new ResponseEntity<Object>(service.getOrders(), HttpStatus.OK);
+			}else {
+				return new ResponseEntity<Object>("Unauthorized request.", HttpStatus.UNAUTHORIZED);
+			}
+		}catch(Exception e) {
+			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
+		}
+	}
+	
+	//localhost:8080/orders
+	@RequestMapping(method = RequestMethod.GET)
+	public ResponseEntity<Object> getGuestOrders(HttpServletRequest request) throws Exception{
+		try {
+			if(authService.isAdmin(authService.getToken(request))) {
+				return new ResponseEntity<Object>(service.getGuestOrders(), HttpStatus.OK);
 			}else {
 				return new ResponseEntity<Object>("Unauthorized request.", HttpStatus.UNAUTHORIZED);
 			}

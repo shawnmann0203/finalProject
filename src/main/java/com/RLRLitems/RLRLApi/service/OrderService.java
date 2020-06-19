@@ -41,6 +41,17 @@ public class OrderService {
 		return repo.findAll();
 	}
 	
+	public Iterable<Order> getGuestOrders(){
+		Iterable<Order> Orders = repo.findAll();
+		Set<Order> guestOrders = new HashSet<Order>();
+		for(Order order : Orders) {
+			if(order.isGuestOrder() == true) {
+				guestOrders.add(order);
+			}
+		}
+		return guestOrders;
+	}
+	
 	public Order submitNewOrder(Set<Long> productIds, Long userId) throws Exception {
 		try {
 			User user = userRepo.findOne(userId);
@@ -54,7 +65,8 @@ public class OrderService {
 	
 	public Order submitNewGuestOrder(Set<Long> productIds, User guest) throws Exception{
 		try {
-			Order order = initializeNewOrder(productIds, guest);
+			Order order = initializeNewGuestOrder(productIds, guest);
+			guestUser(guest);
 			userRepo.save(guest);
 			return repo.save(order);
 		}catch(Exception e) {
@@ -98,6 +110,19 @@ public class OrderService {
 		return order;
 	}
 	
+	private Order initializeNewGuestOrder(Set<Long> productIds, User guest) {
+		Order order = new Order();
+		order.setProducts(converToProductSet(productRepo.findAll(productIds)));
+		order.setOrdered(LocalDate.now());
+		order.setEstimatedDelivery(LocalDate.now().plusDays(DELIVERY_DAYS));
+		order.setUser(guest);
+		order.setInvoiceAmount(calculateOrderTotal(order.getProducts(), guest.getRank()));
+		order.setStatus(OrderStatus.ORDERED);
+		order.setGuestOrder(true);
+		addorderToProducts(order);
+		return order;
+	}
+	
 	private void addorderToProducts(Order order) {
 		Set<Product> products = order.getProducts();
 		for (Product product: products) {
@@ -123,6 +148,13 @@ public class OrderService {
 		}
 		return set;
 	}
+	
+	private void guestUser(User guest) {
+		guest.setFirstName(guest.getFirstName() + " " + guest.getLastName());
+		guest.setLastName(guest.getEmail());
+		guest.setEmail(null);
+	}
+	
 	
 	
 }
