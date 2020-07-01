@@ -25,6 +25,8 @@ public class Order {
 	private double invoiceAmount;
 	private OrderStatus status;
 	private Set<Product> products;
+	
+	@JsonIgnore
 	private boolean isGuestOrder;
 	
 	@JsonIgnore

@@ -49,7 +49,13 @@ public class OrderService {
 				guestOrders.add(order);
 			}
 		}
-		return guestOrders;
+		Iterable<Order> gOrders = guestOrders;
+		return  gOrders;
+	}
+	
+	public Order findOrderById(Long id) {
+		return null;
+		
 	}
 	
 	public Order submitNewOrder(Set<Long> productIds, Long userId) throws Exception {
@@ -63,17 +69,30 @@ public class OrderService {
 		}
 	}
 	
-	public Order submitNewGuestOrder(Set<Long> productIds, User guest) throws Exception{
+	public Order submitNewGuestOrder(Set<Long> productIds) throws Exception{
 		try {
-			Order order = initializeNewGuestOrder(productIds, guest);
-			guestUser(guest);
-			userRepo.save(guest);
+			Order order = initializeNewGuestOrder(productIds);
 			return repo.save(order);
 		}catch(Exception e) {
-			logger.error("Exception occured while trying to create new order for guest user: " + guest, e);
+			logger.error("Exception occured while trying to create a new guest order.", e);
 			throw e;
 		}
 	}
+	
+	public Order addGuestToOrder(User guest, Long id) throws Exception {
+		try {
+			Order guestOrder = repo.findOne(id);
+			User guestUser = guest;
+			guestUser(guestUser, id);
+			guestOrder.setUser(guestUser);
+			userRepo.save(guestUser);
+			return repo.save(guestOrder);
+		} catch(Exception e) {
+			logger.error("Exception occured while trying to add guest information to order id: " + id, e);
+			throw e;
+		}
+	}
+	
 	
 	public Order cancelOrder(Long orderId) throws Exception{
 		try {
@@ -110,15 +129,16 @@ public class OrderService {
 		return order;
 	}
 	
-	private Order initializeNewGuestOrder(Set<Long> productIds, User guest) {
+	private Order initializeNewGuestOrder(Set<Long> productIds) {
 		Order order = new Order();
+		User guest = new User();
 		order.setProducts(converToProductSet(productRepo.findAll(productIds)));
 		order.setOrdered(LocalDate.now());
 		order.setEstimatedDelivery(LocalDate.now().plusDays(DELIVERY_DAYS));
-		order.setUser(guest);
 		order.setInvoiceAmount(calculateOrderTotal(order.getProducts(), guest.getRank()));
 		order.setStatus(OrderStatus.ORDERED);
 		order.setGuestOrder(true);
+		order.setUser(null);
 		addorderToProducts(order);
 		return order;
 	}
@@ -149,11 +169,23 @@ public class OrderService {
 		return set;
 	}
 	
-	private void guestUser(User guest) {
+	private void guestUser(User guest, Long id) {
 		guest.setFirstName(guest.getFirstName() + " " + guest.getLastName());
 		guest.setLastName(guest.getEmail());
-		guest.setEmail(null);
+		guest.setEmail("GuestOrder"+ id);
+		guest.setUsername("GuestOrder"+id);
+		guest.setPassword("GUEST");
 	}
+	
+
+	public boolean isGuestOrder(Long id) {
+		Order order = repo.findOne(id);
+		if(order.isGuestOrder() && order.getUser().equals(null)) {
+			return true;
+		}
+		return false;
+	}
+	
 	
 	
 	

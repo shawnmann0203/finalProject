@@ -46,4 +46,8 @@ public class UserService {
 		
 	}
 	
+	public void addGuestUser(User guest) {
+		repo.save(guest);
+	}
+	
 }

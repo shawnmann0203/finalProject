@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.RLRLitems.RLRLApi.entity.Credentials;
+import com.RLRLitems.RLRLApi.entity.User;
 import com.RLRLitems.RLRLApi.service.AuthService;
 import com.RLRLitems.RLRLApi.service.UserService;
 
@@ -88,6 +89,21 @@ public class UserController {
 				return new ResponseEntity<Object>(e.getMessage(), HttpStatus.NOT_FOUND);
 			}
 	}
+	
+	//localhost:8080/user/{id}
+	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+	public ResponseEntity<Object> updateUserInfo(@RequestBody User user, @PathVariable Long id, HttpServletRequest request){
+		try {
+			if(authService.isCorrectUser(authService.getToken(request), id)) {
+				return new ResponseEntity<Object>(service.updateUserInfo(user, id), HttpStatus.OK);
+			}else {
+				return new ResponseEntity<Object>("Unauthorized request.", HttpStatus.UNAUTHORIZED);
+			}
+		}catch(Exception e) {
+			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.NOT_FOUND);
+		}
+	}
+	
 	
 	
 

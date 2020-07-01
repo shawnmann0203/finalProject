@@ -47,9 +47,9 @@ public class OrderController {
 	
 	//localhost:8080/orders/guest
 	@RequestMapping(value="/guest", method = RequestMethod.POST)
-	public ResponseEntity<Object> createGuestOrder(@RequestBody Set<Long> productIds, @RequestBody User guest){
+	public ResponseEntity<Object> createGuestOrder(@RequestBody Set<Long> productIds){
 		try {
-			return new ResponseEntity<Object>(service.submitNewGuestOrder(productIds, guest), HttpStatus.CREATED);
+			return new ResponseEntity<Object>(service.submitNewGuestOrder(productIds), HttpStatus.CREATED);
 		} catch(Exception e) {
 			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
 		}
@@ -92,8 +92,8 @@ public class OrderController {
 		}
 	}
 	
-	//localhost:8080/orders
-	@RequestMapping(method = RequestMethod.GET)
+	//localhost:8080/orders/guest
+	@RequestMapping(value = "/guest", method = RequestMethod.GET)
 	public ResponseEntity<Object> getGuestOrders(HttpServletRequest request) throws Exception{
 		try {
 			if(authService.isAdmin(authService.getToken(request))) {
@@ -105,5 +105,20 @@ public class OrderController {
 			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
 		}
 	}
+	
+	//localhost:8080/orders/{id}/guest
+	@RequestMapping(value = "/{id}/guest", method = RequestMethod.POST)
+	public ResponseEntity<Object> addGuestToOrder(@RequestBody User guest, @PathVariable Long id) throws Exception{
+		try {
+			if(service.isGuestOrder(id)) {
+				return new ResponseEntity<Object>(service.addGuestToOrder(guest, id), HttpStatus.CREATED);
+			} else {
+				return new ResponseEntity<Object>("Order has been completed already or is not a guest order.", HttpStatus.UNAUTHORIZED);
+			}
+		}catch(Exception e) {
+			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
+		}
+	}
+	
 
 }
